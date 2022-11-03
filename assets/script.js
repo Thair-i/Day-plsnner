@@ -1,14 +1,16 @@
-//setting time and date
+//start with setting the date and time
+
 $('#top-date').text(moment().format("MMM Do YYYY"))
 $('#top-time').text(moment().format('LT'))
 
 //reloading time and date every second
 setInterval(function( ){
+
 $('#top-date').text(moment().format("MMM Do YYYY"))
 $('#top-time').text(moment().format('LT'))
 }, 1000)
 
-//setting values to local storage
+//setting local storage
 $('#text1').val(localStorage.text1)
 $('#text2').val(localStorage.text2)
 $('#text3').val(localStorage.text3)
@@ -19,7 +21,7 @@ $('#text7').val(localStorage.text7)
 $('#text8').val(localStorage.text8)
 $('#text9').val(localStorage.text9)
 
-//saving input values
+//saving input 
 $('#save1').on('click', function(){
     localStorage.text1 = $('#text1').val()
 })
@@ -57,24 +59,24 @@ $('#save9').on('click', function(){
 })
 
 if (moment().hour() == 9 ) {
-    $('#text1').attr('style', 'background-color: lightgreen;')
+    $('#text1').attr('style', 'background-color: lightblue;')
 }
 
 if (moment().hour() > 9 ) {
-    $('#text1').attr('style', 'background-color: lightgrey;')
+    $('#text1').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 9 ) {
-    $('#text1').attr('style', 'background-color: lightsalmon;')
+    $('#text1').attr('style', 'background-color: lightcyan;')
 }
 
 
 if (moment().hour() == 10 ) {
-    $('#text2').attr('style', 'background-color: lightgreen;')
+    $('#text2').attr('style', 'background-color: lightgrey;')
 }
 
 if (moment().hour() > 10 ) {
-    $('#text2').attr('style', 'background-color: lightgrey;')
+    $('#text2').attr('style', 'background-color: lightpink;')
 }
 
 if (moment().hour() < 10 ) {
@@ -86,23 +88,23 @@ if (moment().hour() == 11 ) {
 }
 
 if (moment().hour() > 11 ) {
-    $('#text3').attr('style', 'background-color: lightgrey;')
+    $('#text3').attr('style', 'background-color: lightskyblue;')
 }
 
 if (moment().hour() < 11 ) {
-    $('#text3').attr('style', 'background-color: lightsalmon;')
+    $('#text3').attr('style', 'background-color: lightslategrey;')
 }
 
 if (moment().hour() == 12 ) {
-    $('#text4').attr('style', 'background-color: lightgreen;')
+    $('#text4').attr('style', 'background-color: lightsteelblue;')
 }
 
 if (moment().hour() > 12 ) {
-    $('#text4').attr('style', 'background-color: lightgrey;')
+    $('#text4').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 12 ) {
-    $('#text4').attr('style', 'background-color: lightsalmon;')
+    $('#text4').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() == 13 ) {
@@ -110,11 +112,11 @@ if (moment().hour() == 13 ) {
 }
 
 if (moment().hour() > 13 ) {
-    $('#text5').attr('style', 'background-color: lightgrey;')
+    $('#text5').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 13 ) {
-    $('#text5').attr('style', 'background-color: lightsalmon;')
+    $('#text5').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() == 14 ) {
@@ -122,11 +124,11 @@ if (moment().hour() == 14 ) {
 }
 
 if (moment().hour() > 14 ) {
-    $('#text6').attr('style', 'background-color: lightgrey;')
+    $('#text6').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 14 ) {
-    $('#text6').attr('style', 'background-color: lightsalmon;')
+    $('#text6').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() == 15 ) {
@@ -138,7 +140,7 @@ if (moment().hour() > 15 ) {
 }
 
 if (moment().hour() < 15 ) {
-    $('#text7').attr('style', 'background-color: lightsalmon;')
+    $('#text7').attr('style', 'background-color:lightgreen;')
 }
 
 if (moment().hour() == 16 ) {
@@ -146,11 +148,11 @@ if (moment().hour() == 16 ) {
 }
 
 if (moment().hour() > 16 ) {
-    $('#text8').attr('style', 'background-color: lightgrey;')
+    $('#text8').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 16 ) {
-    $('#text8').attr('style', 'background-color: lightsalmon;')
+    $('#text8').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() == 17 ) {
@@ -158,9 +160,9 @@ if (moment().hour() == 17 ) {
 }
 
 if (moment().hour() > 17 ) {
-    $('#text9').attr('style', 'background-color: lightgrey;')
+    $('#text9').attr('style', 'background-color: lightgreen;')
 }
 
 if (moment().hour() < 17 ) {
-    $('#text9').attr('style', 'background-color: lightsalmon;')
+    $('#text9').attr('style', 'background-color: lightgreen;')
 }
