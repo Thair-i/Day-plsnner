@@ -1,168 +1,41 @@
-//start with setting the date and time
+var date = moment().format("MMM Do YY");
+$("#currentDay").append(date);
 
-$('#top-date').text(moment().format("MMM Do YYYY"))
-$('#top-time').text(moment().format('LT'))
+$(".rowBtn").on("click", function() {
+    var timeOfday = $(this).parent().attr("id");
+    var textContent = $("input").val().trim();
 
-//reloading time and date every second
-setInterval(function( ){
-
-$('#top-date').text(moment().format("MMM Do YYYY"))
-$('#top-time').text(moment().format('LT'))
-}, 1000)
-
-//setting local storage
-$('#text1').val(localStorage.text1)
-$('#text2').val(localStorage.text2)
-$('#text3').val(localStorage.text3)
-$('#text4').val(localStorage.text4)
-$('#text5').val(localStorage.text5)
-$('#text6').val(localStorage.text6)
-$('#text7').val(localStorage.text7)
-$('#text8').val(localStorage.text8)
-$('#text9').val(localStorage.text9)
-
-//saving input 
-$('#save1').on('click', function(){
-    localStorage.text1 = $('#text1').val()
-})
-
-$('#save2').on('click', function(){
-    localStorage.text2 = $('#text2').val()
-})
-
-$('#save3').on('click', function(){
-    localStorage.text3 = $('#text3').val()
-})
-
-$('#save4').on('click', function(){
-    localStorage.text4 = $('#text4').val()
-})
-
-$('#save5').on('click', function(){
-    localStorage.text5 = $('#text5').val()
-})
-
-$('#save6').on('click', function(){
-    localStorage.text6 = $('#text6').val()
-})
-
-$('#save7').on('click', function(){
-    localStorage.text7 = $('#text7').val()
-})
-
-$('#save8').on('click', function(){
-    localStorage.text8 = $('#text8').val()
-})
-
-$('#save9').on('click', function(){
-    localStorage.text9 = $('#text9').val()
-})
-
-if (moment().hour() == 9 ) {
-    $('#text1').attr('style', 'background-color: lightblue;')
-}
-
-if (moment().hour() > 9 ) {
-    $('#text1').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() < 9 ) {
-    $('#text1').attr('style', 'background-color: lightcyan;')
-}
+    localStorage.setItem(timeOfday, textContent);
+    console.log(timeOfday, textContent);
+});    
 
 
-if (moment().hour() == 10 ) {
-    $('#text2').attr('style', 'background-color: lightgrey;')
-}
+//-------Getting individual childern and setting to parent-----//
+  $("#9am").children("input").val(localStorage.getItem("9am"));
 
-if (moment().hour() > 10 ) {
-    $('#text2').attr('style', 'background-color: lightpink;')
-}
+  $("#10am").children("input").val(localStorage.getItem("10am"));
 
-if (moment().hour() < 10 ) {
-    $('#text2').attr('style', 'background-color: lightsalmon;')
-}
+  $("#11am").children("input").val(localStorage.getItem("11am"));
 
-if (moment().hour() == 11 ) {
-    $('#text3').attr('style', 'background-color: lightgreen;')
-}
+  $("#12pm").children("input").val(localStorage.getItem("12pm"));
 
-if (moment().hour() > 11 ) {
-    $('#text3').attr('style', 'background-color: lightskyblue;')
-}
+  $("#1pm").children("input").val(localStorage.getItem("1pm"));
 
-if (moment().hour() < 11 ) {
-    $('#text3').attr('style', 'background-color: lightslategrey;')
-}
+  $("#2pm").children("input").val(localStorage.getItem("2pm"));
 
-if (moment().hour() == 12 ) {
-    $('#text4').attr('style', 'background-color: lightsteelblue;')
-}
+  $("#3pm").children("input").val(localStorage.getItem("3pm"));
 
-if (moment().hour() > 12 ) {
-    $('#text4').attr('style', 'background-color: lightgreen;')
-}
+  $("#4pm").children("input").val(localStorage.getItem("4pm"));
 
-if (moment().hour() < 12 ) {
-    $('#text4').attr('style', 'background-color: lightgreen;')
-}
+  $("#5pm").children("input").val(localStorage.getItem("5pm"));
 
-if (moment().hour() == 13 ) {
-    $('#text5').attr('style', 'background-color: lightgreen;')
-}
+$('#9').attr('style', 'background-color: lightblue;')
+$('#10').attr('style', 'background-color: lightcoral;')
+$('#11').attr('style', 'background-color: lightcyan;')
+$('#12').attr('style', 'background-color: lightgray;')
+$('#13').attr('style', 'background-color: lightgreen;')
+$('#14').attr('style', 'background-color: lightpink;')
+$('#15').attr('style', 'background-color: lightsalmon;')
+$('#16').attr('style', 'background-color: lightyellow;')
+$('#17').attr('style', 'background-color: lightsteelbue;')
 
-if (moment().hour() > 13 ) {
-    $('#text5').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() < 13 ) {
-    $('#text5').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() == 14 ) {
-    $('#text6').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() > 14 ) {
-    $('#text6').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() < 14 ) {
-    $('#text6').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() == 15 ) {
-    $('#text7').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() > 15 ) {
-    $('#text7').attr('style', 'background-color: lightgrey;')
-}
-
-if (moment().hour() < 15 ) {
-    $('#text7').attr('style', 'background-color:lightgreen;')
-}
-
-if (moment().hour() == 16 ) {
-    $('#text8').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() > 16 ) {
-    $('#text8').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() < 16 ) {
-    $('#text8').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() == 17 ) {
-    $('#text9').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() > 17 ) {
-    $('#text9').attr('style', 'background-color: lightgreen;')
-}
-
-if (moment().hour() < 17 ) {
-    $('#text9').attr('style', 'background-color: lightgreen;')
-}

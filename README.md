@@ -23,4 +23,3 @@ THEN the saved events persist
 
 Mock-Up
 The following animation demonstrates the application functionality: 
-![](./images/Screen%20Shot.png)
