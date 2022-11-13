@@ -10,7 +10,6 @@ $(".rowBtn").on("click", function() {
 });    
 
 
-//-------Getting individual childern and setting to parent-----//
   $("#9am").children("input").val(localStorage.getItem("9am"));
 
   $("#10am").children("input").val(localStorage.getItem("10am"));
