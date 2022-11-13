@@ -23,3 +23,4 @@ THEN the saved events persist
 
 Mock-Up
 The following animation demonstrates the application functionality: 
+![Screen Shot 2022-11-13 at 4 21 02 AM](https://user-images.githubusercontent.com/110577068/201521656-248a8b9c-1241-4e2b-8e33-f1b0ee458140.png)
